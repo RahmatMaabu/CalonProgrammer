@@ -1,184 +1,1085 @@
 *{
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.latar{
+html{
+  
+  scroll-behavior: smooth;
+}
+body{
+  
+  font-family: "Roboto",sans-serif;
+  height: 4500px;
+  background: whitesmoke;
+}
+
+
+@media only screen and (max-width: 850px){
+  .container-navbar{
+  transition: background-color 1s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 55px;
+  background: transparent;
+  z-index: 9999;
+}
+.container-navbar.scrolled{
+  background: white;
+}
+
+.container-navbar nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+nav .Logo{
+  background: transparent;
+  position: absolute;
+  top: 5px;
+  left: 10%;
+  transition: .5s;
+}
+nav .Logo.h2geser{
+  left: -50%;
+}
+nav .Logo.h2back{
+  left: 2%;
+}
+nav .Logo h2{
+  color: black;
+  font-size: 40px;
+  font-weight: 50;
+  font-family:"Qwigley", cursive;
+}
+
+nav .menu{
+  position: absolute;
+  background: black;
+  height: 1000px;
+  width: 345px;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  transition: .5s ease-in-out;
+  font-family: "arial", sans-serif;
+}
+.menu.active{
+  right: 0%;
+}
+nav .close{
+  position: absolute;
+  top: -2px;
+  right: -100%;
+  color: black;
+  background: transparent;
+  font-size: 40px;
+  font-weight: 900;
+  transition: .4s ease-in-out;
+}
+
+nav .close.Gclose{
+  right: 350px;
+}
+nav .menu ul{
+  position: relative;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.menu ul .x{
+  position: absolute;
+  top: -80px;
+  right: 0;
+  color: white;
+  background: transparent;
+  font-size: 40px;
+  font-weight: 900;
+}
+.menu ul li{
+  list-style-type: none;
+  background: transparent;
+  padding: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.menu ul li a{
+  font-size: 13px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  
+}
+.menu-toggle{
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: 30px;
+  transition: .5s ease-in-out;
+  color: black;
+}
+.menu-toggle.menu-geser{
+  right: 1000px;
+}
+/**Hero Section**/
+.hero{
+  margin-top: 20px;
+  background: url("Design.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s ease-in-out;
+}
+.hero .hero-content{
+  position: relative;
+  background: #333;
+  width: 280px;
+  display: flex;
+  opacity: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: .5s ease-in-out;
+}
+.hero-content.Ghero{
+  right: 300px;
+ 
+}
+
+.hero-content h2{
+  color: white;
+  font-size: 25px;
+  margin: 10px;
   width: 100%;
-  height: 100vh;
-  background: #F0EEFC;
+  text-align: center;
+  padding: 20px 0 0;
+  font-family: "Arial", sans-serif;
+}
+.hero-content p{
+  color: white;
+  text-align: center;
+  padding: 0 30px 20px;
+  font-weight: 600;
+  font-family: arial;
+}
+
+/**Batas Hero Section**/
+ 
+ /**Hero About**/
+ .hero-about{
+   min-height: 100vh;
+   background: floralwhite;
+   display: flex;
+   justify-content: center;
+  
+ }
+ .hero-about .about-content{
+   position: relative;
+   top: 60px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .about-content .E{
+   font-size: 16px;
+   color: limegreen;
+   margin-top: 0px;
+ }
+ .about-content h2{
+   font-size: 20px;
+   font-weight: 600;
+   margin-top: 15px;
+   opacity: 80%;
+ }
+ .about-content p{
+   margin-top: 30px;
+   background: red;
+   width: 600px;
+   opacity: 80%;
+   font-size: 16px;
+ }
+ .about-content .more{
+   font-size: 12px;
+   color: limegreen;
+   font-weight: 900;
+   border-bottom: 0.6px solid;
+   
+   width: 108px;
+ }
+ 
+ .about-content .visi{
+   font-weight: 900;
+ }
+ 
+/**Hero Design**/
+.hero-design{
+  position: relative;
+  background: white;
+  min-height: 1700px;
+  
+}
+.hero-design .design-content{
+  position: relative;
+  top: 60px;
+  text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
-   }
-
-.latar .logout{
-  position: absolute;
-  right: 10px;
-  color: black;
-  font-size: 30px;
-  
 }
-.latar .title h1{
-  margin-top: 20px;
-  color: slategray;
-  text-align: center;
-  font-size: 20px;
-}
-.latar .foto{
-  margin-top:20px;
-  direction: flex;
-  justify-content: center;
-  align-items: center;
-}
-.foto img{
-  border: 2px solid aqua;
-  border-radius: 100%;
-  width: 90px;
-  height: 90px;
-}
-.nama h2{
-  margin-top: 15px;
-  color: slategray;
-  text-align: center;
-  font-size: 16px;
-}
-.box-posisi{
-margin-top: 20px;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-}
-.box-link{
-  margin-top: 30px;
-  width: 400px;
-  height:20px;
-  color: white;
-  border: 2px solid aqua;
-  background: slategrey;
-  border-radius: 50px;
+.design-name{
   display: flex;
   align-items: center;
-  padding: 20px 0;
+  flex-direction: column;
 }
-.box-link .logo{
-  margin-left: 20px;
-  font-size: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.box-link .title-logo{
-  position: relative;
-  left: 0;
-  right: 0;
-  margin-right: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.title-logo a{
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
+.design-name .A{
+  font-size: 13px;
+  color: limegreen;
   font-weight: 600;
 }
-@media screen 
-and (max-width:450px)
-and (max-height: 812px){
-  .latar {
-          height: 100vh;
-  }   
-  .latar .logout{
-        font-size: 25px;
-  }  
-  .latar .title h1{
-          font-size: 16px;
-          margin-top: 10px;
-  }
-  .latar .foto{
-          margin-top: 15px;
-        
-  }
-  .foto img{
-          border: 2px solid aqua;
-          width: 80px;
-          height: 80px;
-  }
-  .nama h2{
-          margin-top: 8px;
-          font-size: 11px;
-  }
-  .box-posisi{
-          margin-top: 20px;
-  }
-  .box-link{
-    margin-top: 30px;
-    border: 1px solid aqua;
-    width: 280px;
-    height: 30px;
-    padding: 20px 0;
-  }
-  .box-link .logo{
-          margin-left: 10px;
-          font-size: 20px;
-  }
-  .box-link .title-logo{
-         
-          margin-right: 20px;
-  }
-  .title-logo a{
-          font-size: 10px;
-  }
+.design-content .design-name .B{
+  font-weight: 900;
+  font-size: 16px;
+  margin-top: 15px;
 }
-@media screen 
-and (max-width:300px)
-and (max-height: 812px){
-  .latar {
-          height: 100vh;
-  }   
-  .latar .logout{
-        font-size: 20px;
-  }  
-  .latar .title h1{
-          font-size: 16px;
-          margin-top: 10px;
-  }
-  .latar .foto{
-          margin-top: 15px;
-        
-  }
-  .foto img{
-          border: 2px solid aqua;
-          width: 80px;
-          height: 80px;
-  }
-  .nama h2{
-          margin-top: 8px;
-          font-size: 11px;
-  }
-  .box-posisi{
-          margin-top: 20px;
-  }
-  .box-link{
-    margin-top: 30px;
-    border: 1px solid aqua;
-    width: 230px;
-    height: 30px;
-    padding: 20px 0;
-  }
-  .box-link .logo{
-          margin-left: 10px;
-          font-size: 20px;
-  }
-  .box-link .title-logo{
-         
-          margin-right: 20px;
-  }
-  .title-logo a{
-          font-size: 10px;
-  }
+
+.design-name p{
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: limegreen;
+  border-bottom: 1px solid;
+  width: 100px;
 }
+.design-content .design-ket p{
+  font-weight: 200;
+  padding-top: 10px;
+}
+
+.type-desain{
+  margin-top: 20px;
+}
+.type-desain p{
+  font-weight: 800;
+  font-size: 13px;
+  
+}
+.Ars{
+  margin-top: 20px;
+}
+.Ars img{
+  width: 300px;
+}
+.pamflet{
+  margin-top: 20px;
+}
+.pamflet img{
+  width: 400px;
+}
+.spanduk{
+  margin-top: 20px;
+}
+.spanduk img{
+  width: 600px;
+}
+.spanduk2{
+  margin-top: 20px;
+}
+.spanduk2 img{
+  width: 600px;
+  
+}
+
+.estetik {
+  margin-top: 20px;
+}
+.estetik img{
+  width: 500px;
+  
+}
+.web{
+  margin-top: 20px;
+  width: 350px;
+  font-size: 12px;
+  background: transparent;
+  
+}
+.web p{
+  font-weight: 600;
+}
+
+/**Jasa tambahan**/
+.Jasa{
+  background: #f0efeb;
+  min-height: 750px;
+}
+.content-jasa{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.content-jasa .jasa-tambahan{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.content-jasa .jasa-tambahan .j {
+  font-size: 13px;
+  color: limegreen;
+  margin-top: 0;
+  
+  
+}
+.jasa-tambahan h2{
+  color: #333;
+  font-size: 14px;
+  margin-top: 20px;
+ 
+}
+.jasa-tambahan h4{
+  margin-top: 20px;
+  background: #d3d3d3;
+  font-size: 13px;
+  width: 300px;
+  color: limegreen;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  opacity: 60%;
+  font-weight: 900;
+  
+}
+.print{
+  padding: 10px;
+  margin-top: 10px;
+  background: #d3d3d3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  opacity: 60%;
+  border-radius: 10px;
+}
+
+.print h5{
+  background: transparent;
+  text-align: center;
+}
+.lain-nya{
+  margin-top: 30px;
+}
+.lain-nya h4{
+  width: 300px;
+  text-align: center;
+  opacity: 60%;
+  font-size: 13px;
+  color: limegreen;
+  background: #d3d3d3;
+  padding: 5px;
+  border-radius: 10px;
+}
+.print .daerah{
+  background: #f0efeb;
+  border-radius: 10px;
+  border: 1px solid limegreen;
+  font-size: 12px;
+}
+.hero-galery{
+  background: floralwhite;
+  min-height: 750px;
+  
+}
+.hero-galery .content-galery{
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-galery .foto{
+  color: limegreen;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+}
+.content-galery h2{
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.content-galery .owner{
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 430px;
+  width: 100%;
+  
+}
+.owner .owner-box{
+  background: white;
+  width: 370px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 380px;
+}
+.content-galery .owner .owner-box img{
+  width: 330px;
+  z-index: 99;
+  margin-top: 20px;
+}
+.owner .nama-owner{
+  position: relative;
+  
+  font-weight: 600;
+  z-index: 8;
+  text-align: center;
+  font-size: 22px;
+  font-family: Arial;
+  background: transparent;
+  width: 330px;
+  }
+  .nama-owner p{
+    position: relative;
+    top: -30px;
+    font-size: 12px;
+    
+    color: #333;
+    opacity: 40%;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+  }
+  .hero-contact{
+    background: white;
+    overflow: hidden;
+    height: 680px;
+  }
+  .isi-contact iframe{
+    height: 250px;
+   width: 100%;
+  }
+  .isi-contact .alamat-n{
+    margin-top: 30px;
+    padding: 20px;
+    background: transparent;
+  }
+  .alamat-n h4{
+    font-weight: 800;
+    font-family: Arial;
+  }
+  .alamat-n p{
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 60%;
+    flex-direction: row;
+  }
+  .alamat-n .mail{
+    position: relative;
+    top: -27px;
+    background: transparent;
+    left: 140px;
+    width: 200px;
+    font-size: 12px;
+  }
+ .alamat-n.o{
+   position: relative;
+   top: -70px;
+ }
+ .alamat-n.a{
+   position: relative;
+   top: -115px;
+ }
+ .fti{
+   position: relative;
+   top: -150px;
+   background: transparent;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   
+ }
+ .fti i{
+   font-size: 20px;
+   opacity: 40%;
+ }
+ .name-logo{
+   position: relative;
+   top: -265px;
+   left: 35px;
+   background: transparent;
+   padding: 20px;
+   font-weight: 800;
+   opacity: 40%;
+   font-size: 13px;
+ }
+ .name-logo .twitt{
+   padding: 12px 0;
+ }
+ .footer{
+   position: relative;
+   top: -240px;
+   background: black;
+   width: 100%;
+   height: 90px;
+ }
+ .footer p{
+   color: white;
+   font-size: 11px;
+   padding: 20px;
+   text-align: center;
+ }
+ .By-r{
+   position: relative;
+   top: -30px;
+   background: transparent;
+ }
+}
+
+
+
+/**Max Width 550px**/
+ @media only screen and (max-width: 550px){
+.container-navbar{
+  transition: background-color 1s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 55px;
+  background: transparent;
+  z-index: 9999;
+}
+.container-navbar.scrolled{
+  background: white;
+}
+
+.container-navbar nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+nav .Logo{
+  background: transparent;
+  position: absolute;
+  top: 5px;
+  left: 10%;
+  transition: .5s;
+}
+nav .Logo.h2geser{
+  left: -50%;
+}
+nav .Logo.h2back{
+  left: 2%;
+}
+nav .Logo h2{
+  color: black;
+  font-size: 40px;
+  font-weight: 50;
+  font-family:"Qwigley", cursive;
+}
+
+nav .menu{
+  position: absolute;
+  background: black;
+  height: 1000px;
+  width: 345px;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  transition: .5s ease-in-out;
+  font-family: "arial", sans-serif;
+}
+.menu.active{
+  right: 0%;
+}
+nav .close{
+  position: absolute;
+  top: -2px;
+  right: -100%;
+  color: black;
+  background: transparent;
+  font-size: 40px;
+  font-weight: 900;
+  transition: .4s ease-in-out;
+}
+
+nav .close.Gclose{
+  right: 350px;
+}
+nav .menu ul{
+  position: relative;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.menu ul .x{
+  position: absolute;
+  top: -80px;
+  right: 0;
+  color: white;
+  background: transparent;
+  font-size: 40px;
+  font-weight: 900;
+}
+.menu ul li{
+  list-style-type: none;
+  background: transparent;
+  padding: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.menu ul li a{
+  font-size: 13px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  
+}
+.menu-toggle{
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: 30px;
+  transition: .5s ease-in-out;
+  color: black;
+}
+.menu-toggle.menu-geser{
+  right: 1000px;
+}
+/**Batas Navigation Bar**/
+
+/**Hero Section**/
+.hero{
+  margin-top: 20px;
+  background: url("Design.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s ease-in-out;
+}
+.hero .hero-content{
+  position: relative;
+  background: #333;
+  width: 280px;
+  display: flex;
+  opacity: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: .5s ease-in-out;
+}
+.hero-content.Ghero{
+  right: 300px;
+ 
+}
+
+.hero-content h2{
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 0;
+  font-family: "Arial", sans-serif;
+}
+.hero-content p{
+  color: white;
+  text-align: center;
+  padding: 0 30px 20px;
+  font-weight: 600;
+  font-family: arial;
+}
+
+/**Batas Hero Section**/
+ 
+ /**Hero About**/
+ .hero-about{
+   min-height: 100vh;
+   background: floralwhite;
+   display: flex;
+   justify-content: center;
+  
+ }
+ .hero-about .about-content{
+   position: relative;
+   top: 60px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .about-content .E{
+   font-size: 13px;
+   color: limegreen;
+   margin-top: 0px;
+ }
+ .about-content h2{
+   font-size: 18px;
+   font-weight: 600;
+   margin-top: 15px;
+   opacity: 80%;
+ }
+ .about-content p{
+   margin-top: 30px;
+   background: transparent;
+   width: 350px;
+   opacity: 80%;
+   font-size: 14px;
+ }
+ .about-content .more{
+   font-size: 12px;
+   color: limegreen;
+   font-weight: 900;
+   border-bottom: 0.6px solid;
+   
+   width: 108px;
+ }
+ 
+ .about-content .visi{
+   font-weight: 900;
+ }
+ 
+/**Hero Design**/
+.hero-design{
+  position: relative;
+  background: white;
+  min-height: 1700px;
+  
+}
+.hero-design .design-content{
+  position: relative;
+  top: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.design-name{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.design-name .A{
+  font-size: 13px;
+  color: limegreen;
+  font-weight: 600;
+}
+.design-content .design-name .B{
+  font-weight: 900;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.design-name p{
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: limegreen;
+  border-bottom: 1px solid;
+  width: 100px;
+}
+.design-content .design-ket p{
+  font-weight: 200;
+  padding-top: 10px;
+}
+
+.type-desain{
+  margin-top: 20px;
+}
+.type-desain p{
+  font-weight: 800;
+  font-size: 13px;
+  
+}
+.Ars{
+  margin-top: 20px;
+}
+.Ars img{
+  width: 300px;
+}
+.pamflet{
+  margin-top: 20px;
+}
+.pamflet img{
+  width: 200px;
+}
+.spanduk{
+  margin-top: 20px;
+}
+.spanduk img{
+  width: 330px;
+}
+.spanduk2{
+  margin-top: 20px;
+}
+.spanduk2 img{
+  width: 330px;
+  
+}
+
+.estetik {
+  margin-top: 20px;
+}
+.estetik img{
+  width: 300px;
+  
+}
+.web{
+  margin-top: 20px;
+  width: 350px;
+  font-size: 12px;
+  background: transparent;
+  
+}
+.web p{
+  font-weight: 600;
+}
+
+/**Jasa tambahan**/
+.Jasa{
+  background: #f0efeb;
+  min-height: 750px;
+}
+.content-jasa{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.content-jasa .jasa-tambahan{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.content-jasa .jasa-tambahan .j {
+  font-size: 13px;
+  color: limegreen;
+  margin-top: 0;
+  
+  
+}
+.jasa-tambahan h2{
+  color: #333;
+  font-size: 14px;
+  margin-top: 20px;
+ 
+}
+.jasa-tambahan h4{
+  margin-top: 20px;
+  background: #d3d3d3;
+  font-size: 13px;
+  width: 300px;
+  color: limegreen;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  opacity: 60%;
+  font-weight: 900;
+  
+}
+.print{
+  padding: 10px;
+  margin-top: 10px;
+  background: #d3d3d3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  opacity: 60%;
+  border-radius: 10px;
+}
+
+.print h5{
+  background: transparent;
+  text-align: center;
+}
+.lain-nya{
+  margin-top: 30px;
+}
+.lain-nya h4{
+  width: 300px;
+  text-align: center;
+  opacity: 60%;
+  font-size: 13px;
+  color: limegreen;
+  background: #d3d3d3;
+  padding: 5px;
+  border-radius: 10px;
+}
+.print .daerah{
+  background: #f0efeb;
+  border-radius: 10px;
+  border: 1px solid limegreen;
+  font-size: 12px;
+}
+.hero-galery{
+  background: floralwhite;
+  min-height: 750px;
+  
+}
+.hero-galery .content-galery{
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-galery .foto{
+  color: limegreen;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+}
+.content-galery h2{
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.content-galery .owner{
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 430px;
+  width: 100%;
+  
+}
+.owner .owner-box{
+  background: white;
+  width: 370px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 380px;
+}
+.content-galery .owner .owner-box img{
+  width: 330px;
+  z-index: 99;
+  margin-top: 20px;
+}
+.owner .nama-owner{
+  position: relative;
+  
+  font-weight: 600;
+  z-index: 8;
+  text-align: center;
+  font-size: 22px;
+  font-family: Arial;
+  background: transparent;
+  width: 330px;
+  }
+  .nama-owner p{
+    position: relative;
+    top: -30px;
+    font-size: 12px;
+    
+    color: #333;
+    opacity: 40%;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+  }
+  .hero-contact{
+    background: white;
+    overflow: hidden;
+    height: 680px;
+  }
+  .isi-contact iframe{
+    height: 250px;
+   width: 100%;
+  }
+  .isi-contact .alamat-n{
+    margin-top: 30px;
+    padding: 20px;
+    background: transparent;
+  }
+  .alamat-n h4{
+    font-weight: 800;
+    font-family: Arial;
+  }
+  .alamat-n p{
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 60%;
+    flex-direction: row;
+  }
+  .alamat-n .mail{
+    position: relative;
+    top: -27px;
+    background: transparent;
+    left: 140px;
+    width: 200px;
+    font-size: 12px;
+  }
+ .alamat-n.o{
+   position: relative;
+   top: -70px;
+ }
+ .alamat-n.a{
+   position: relative;
+   top: -115px;
+ }
+ .fti{
+   position: relative;
+   top: -150px;
+   background: transparent;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   
+ }
+ .fti i{
+   font-size: 20px;
+   opacity: 40%;
+ }
+ .name-logo{
+   position: relative;
+   top: -265px;
+   left: 35px;
+   background: transparent;
+   padding: 20px;
+   font-weight: 800;
+   opacity: 40%;
+   font-size: 13px;
+ }
+ .name-logo .twitt{
+   padding: 12px 0;
+ }
+ .footer{
+   position: relative;
+   top: -240px;
+   background: black;
+   width: 100%;
+   height: 90px;
+ }
+ .footer p{
+   color: white;
+   font-size: 11px;
+   padding: 20px;
+   text-align: center;
+ }
+ .By-r{
+   position: relative;
+   top: -30px;
+   background: transparent;
+ }
+ }

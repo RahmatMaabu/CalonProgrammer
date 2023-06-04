@@ -5,51 +5,227 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>@rhmat_15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&family=Dancing+Script&family=Open+Sans:wght@300;400&family=Qwigley&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <title>NofairDesign</title>
 </head>
 <body>
- 
-   <div class="latar">
-     <i class="logout"><ion-icon name="log-out-outline"></ion-icon></i>
-     <div class="title"><h1>Follow Me!!</h1></div>
-     <div class="foto"><img src="My foto.jpg" alt=""></div>
-     <div class="nama">
-       <h2>RAHMAT MAABU</h2>
+    <!------Navigation bar------>
+  <div class="container-navbar">
+    <nav>
+      <div class="Logo">
+        <h2>Nofair Design</h2>
+      </div>
+      <div onclick="menuTogglex()" class="close">
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+      <div class="menu" id="menu">
+        <ul onclick="menuTogglex()">
+          <div class="x" onclick="menuTogglex()"><ion-icon name="close-outline"></ion-icon></div>
+          <li><a href="#">Home</a></li>
+          <li><a onclick="A()" href="#About">About</a></li>
+          <li><a href="#hero-design">Type Of Design</a></li>
+          <li><a href="#jasa">Jasa Tambahan</a></li>
+          
+          <li><a href="#galery">Galery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()"><ion-icon name="menu-sharp"></ion-icon></div>
+    </nav>
+  </div>
+    <!------Batas Navigation bar------>
+   
+   
+    <!------Hero Section------>
+  
+  <section class="hero">
+    <main class="hero-content">
+      <h2>Hello Guys!</h2>
+      <p>Selamat Datang di Nofair Design</p>
+    </main>
+  </section>
+    <!------Batas Hero Section------>
+  <section id="About" class="hero-about">
+    <main class="about-content">
+      <div>
+        <h2 class="E">ENJOY SOOTHING EXPERIENCE</h2>
+        <h2>WELCOME TO NOFAIR DESIGN</h2>
+        <p>Nofair Design adalah studio desain kreatif yang menghadirkan pengalaman visual yang menakjubkan dan solusi desain inovatif. Visi kami adalah menjadi mitra desain pilihan yang mewujudkan visi klien menjadi kenyataan yang memukau. Misi kami adalah memberikan solusi desain yang kreatif, fungsional, dan berorientasi pada kepuasan klien, dengan kolaborasi yang kuat dan mengikuti tren terkini dalam industri desain.</p>
+      </div>
+      <div>
+        <p class="more">EXPLORE MORE</p>
+      </div>
+      <div>
+        <p class="visi">VISI KAMI</p>
+      </div>
+      <div>
+        <p>Menjadi mitra desain pilihan yang mewujudkan visi klien menjadi kenyataan yang memukau.</p>
+      </div>
+      <div>
+        <p class="visi">MISI KAMI</p>
+      </div>
+      <div>
+        <p>Memberikan solusi desain yang kreatif, fungsional, dan berorientasi pada kepuasan klien, dengan kolaborasi yang kuat dan mengikuti tren terkini dalam industri desain.</p>
+      </div>
+    </main>
+  </section>
+   
+  <!------Design Grafis------>
+  <section class="hero-design" id="hero-design">
+    <main class="design-content">
+      <div class="design-name">
+        <h2 class="A">ENJOY SOOTHING EXPERIENCE</h2>
+        <h2 class="B">WELCOME TYPE OF DESIGN BY NOFAIR</h2>
+        <p>TYPE DESAIN</p>
+      </div>
+     <div class="type-desain">
+       <p>DESAIN ARSITEKTUR</p>
      </div>
-     <div class="box-posisi">
-     <div class="box-link">
-       <div class="logo-icon">
-       <i class="logo"><ion-icon name="logo-facebook"></ion-icon></i>
-       </div>
-       <div class="title-logo">
-       <a href="https://www.facebook.com/inginmemutarwaktu">Facebook</a>
-       </div>
+     <div class="Ars">
+       <img src="Ars.jpg" alt="">
      </div>
-          <div class="box-link">
-            <div class="logo-icon">
-              <i class="logo"><ion-icon name="logo-instagram"></ion-icon></i>
-            </div>
-            <div class="title-logo">
-              <a href="https://instagram.com/_rhmat_15?igshid=YmMyMTA2M2Y=">Instagram</a>
-            </div>
-          </div>     <div class="box-link">
-                 <div class="logo-icon">
-                   <i class="logo"><ion-icon name="logo-whatsapp"></ion-icon></i>
-                 </div>
-                 <div class="title-logo">
-                   <a href="https://wa.me/qr/OUZG5GRH5T3UC1">WhatsApp</a>
-                 </div>
-               </div>     <div class="box-link">
-                      <div class="logo-icon">
-                        <i class="logo"><ion-icon name="logo-twitter"></ion-icon></i>
-                      </div>
-                      <div class="title-logo">
-                        <a href="">Twitter</a>
-                      </div>
-                    </div>
-           </div>
-   </div>
-   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script
-   <body>
+     <div class="type-desain">
+       <p>DESIGN PAMFLET</p>
+     </div>
+     <div class="pamflet">
+       <img src="pamflet.jpg" alt="pamflet.jpg">
+     </div>
+    <div class="type-desain">
+      <p>SPANDUK/BALIHO</p>
+    </div>
+    <div class="spanduk">
+      <img src="spanduk.jpg" alt="">
+    </div>
+    <div class="spanduk2"><img src="spanduk2.jpg" alt="spanduk2.jpg"></div>
+    <div class="type-desain">
+      <p>DESAIN ESTETIK/UNDANGAN DLL</p>
+    </div>
+    <div class="estetik">
+      <img src="undangan.jpg" alt="undangan.jpg">
+    </div>
+    <div class="type-desain">
+      <p>DESAIN WEBSITE</p>
+    </div>
+    <div class="web">
+      <p>SELAIN BEBERAPA DESAIN DIATAS, NOFAIR DESIGN JUGA MENERIMA DESAUN WEBSITE SEPERTI DESAIN WEB NOFAIR DESIGN.</p>
+      
+    </div>
+    </main>
+  </section>
+   
+ <!------Batas Design Grafis------>
+    
+<section id="jasa" class="Jasa">
+ <main class="content-jasa">
+   <div class="jasa-tambahan">
+     <h2 class="j">ENJOY SOOTHING EXPERIENCE</h2>
+     <h2>WELCOME JASA TAMBAHAN BY NOFAIR</h2>
+     <h4>JASA PRINT</h4>
+     </div>
+     <div class="print">
+       <h5>Print Skripsi.</h5>
+       <h5>Print Stiker Siap Pakai.</h5>
+       <h5>Print Selebaran Brosur.</h5>
+       <h5>Print Gambar Dan Foto.</h5>
+       <h5>Print Tugas Sekolah/Kuliah A4.</h5>
+       <h5>Print Segel Box, Kartu Nama, Kartu Ucapan DLL.</h5>
+       </div>
+       <div class="lain-nya">
+         <h4>JASA LAIN-NYA</h4>
+         </div>
+         <div class="print">
+           <h5>Jasa Ketik Tugas, Gambar Dan Lukis.</h5>
+           <h5>Jasa Mengarang Puisi Dan Cerpen.</h5>
+           <h5>Jasa Membuat Piagam Penghargaan, Medali, Dan Kartu Nama.</h5>
+           <h5>Jasa Packing Kado (Box, Kartu Ucapan, Segel, Pita Paper Bag).</h5>
+           <h5>Jasa Mencari Hadiah Estetik</h5>
+         </div>
+         <div class="lain-nya">
+           <h4>Menerima Pesanan</h5>
+         </div>
+         <div class="print">
+           <h5 class="daerah">Khusus Daerah Gorontalo Kecamatan Kabila Bone !!!!.</h5>
+           
+           <h5>Pesanan Nasi Box Jumlah Banyak</h5>
+           <h5>Es Alpucok Dan Cendol</h5>
+           <h5>Nasi Ayam Lalapan.</h5>
+           <h5>Nasi Ayam Geprek.</h5>
+           <h5>Soto Ayam, Mie Bakso Milu Siram, Mie Cakalang.</h5>
+ </div>
+ </main>
+</section>
+    
+      <!------Our Galery------>
+    
+  <section id="galery" class="hero-galery">
+    <main class="content-galery">
+      <div class="galery">
+        <h2 class="foto">WELCOME GALERY NOFAIR FAMILY</h2>
+        <h2>OUR GALERY</h2>
+      </div>
+      <div class="owner">
+        <div class="owner-box">
+        <img src="owner1.jpg" alt="owner1">
+        <div class="nama-owner">
+          <h2>GET INSPIRATIONS AND LEARN HOW WE WORKS</h2>
+          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+        </div>
+        </div>
+      </div>
+      <div class="owner">
+        <div class="owner-box">
+        <img src="owner2.jpg" alt="owner2">
+        <div class="nama-owner">
+         <h2>GET INSPIRATIONS AND LEARN HOW WE WORKS</h2>
+         <p>Lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+        </div>
+        </div>
+      </div>
+    </main>
+  </section>
+  
+  <section id="contact" class="hero-contact">
+    <main class="isi-contact">
+ <div class="maps">
+<iframe src="https://www.google.com/maps?q=Teras+Makan+Nofair&output=embed" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<div class="alamat-n">
+  <h4>ADDRESS</h4>
+  <p>Jl. Trans Sulawesi Utara, Gorontalo,  Kecamatan Kabila Bone, Desa Botutonuo, Indonesia, 96553.</p>
+  <p><ion-icon name="call"></ion-icon>0822296712007</p> 
+  <p class="mail"><ion-icon name="mail"></ion-icon>nofairdesign@gmail.com</p>
+</div>
+<div class="alamat-n o">
+  <h4>OPENING HOURS</h4>
+  <p>SENIN - MINGGU: 7:00 AM - 11:00 PM</p>
+</div>
+<div class="alamat-n a">
+  <h4>FOLLOW US</h4>
+</div>
+<div class="fti">
+  <i><ion-icon name="logo-facebook"></ion-icon></i>
+  <i><ion-icon name="logo-twitter"></ion-icon></i>
+  <i><ion-icon name="logo-instagram"></ion-icon></i>
+</div>
+<div class="name-logo">
+  <p>Facebook</p>
+  <p class="twitt">Twitter</p>
+  <p>Instagram</p>
+</div>
+<div class="footer">
+  <p>Copyright © 2023 Nofair Design Indonesia. All Rights Reserved.</p>
+  <p class="By-r">BY RAHMAT MAABU</p>
+</div>
+    </main>
+</section>
+   
+    <!---------link ion icons-------->
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!------batas link ionicons------->
+ <script src="main.js"></script>
+</body>
 </html>
